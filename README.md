@@ -15,4 +15,11 @@ It turns out this is probably not that far from the real number, 90% of Japanese
 
 Once we have this data we can also make a list of all sino-japanese words (i.e. words that equivalent across characters, like 可憐/可怜=かれん=ke lian). 
 
-In any case, I'm sharing my data here. I'll do a proper writeup at some point, but most of the data is sourced from Unihan.
+In any case, I'm sharing my data here. Hopefully someone else finds it useful.
+
+## Techniques
+I'll do a proper writeup at some point, but most of the data is sourced from Unihan. The tl;dr is this:
+* Do a DFS on the map of all unihan connections to find all clusters
+* Since clusters tend to be too noisy on their own (they contain obselete and obscure variants), filter and reduce based on various heuristics, such as if the character appears in the 10000 most common words in a dictionary
+* Group characters that have similar pinyin and semantic meanings as "merge candidates"
+* Merge characters that pass a certain heuristic
