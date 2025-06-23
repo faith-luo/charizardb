@@ -24,7 +24,8 @@ In any case, I'm sharing my data here. Hopefully someone else finds it useful.
 * `characters_common.txt` - A union of Jinmeiyo kanji, Joyo kanji, JLPT kanjk, HSK hanzi, and the 3000 most common characters from both Chinese and Japanese. Contains Japanese/simplified CN/trad CN variants, pinyin readings, kun/on readings, and basic english meaning.
 * `characters_all.txt` - Same as above but contains around 10000 charact    ers from each language.
 * `variants_common.txt` - Only the characters in the common list that differ between Japanese and chinese traditional. Useful for benchmarking against other dictionaries.
-* `variants_all.txt` - Variants but for the long list.
+* `variants_all.txt` - A Variants but for the long list.
+* `sino_jp.txt` - Using the above data, a list of around 20000 sino-jp words and their pinyin/hiragana readings.
 
 ## Techniques
 I'll do a proper writeup at some point, but most of the data is sourced from Unihan. The tl;dr is this:
