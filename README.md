@@ -1,6 +1,12 @@
 # charizardb
 Japanese-Chinese cross-linguistic (k|h)an(j|z)i mapping
 
+```
+啊	啊	啊	a	こえ	ア	exclamatory particle
+阿	阿	阿	ā	くま,おもねる,お	ア,アク,アチ,オク	prefix for people's names; used in transliteration
+癌	癌	癌	ái	がん	ガン	cancer; marmoset
+```
+
 ## Overview
 
 I am a native bilingual English/Chinese speaker. When I started learning Japanese, I found that most language learning resources were targeted either at Chinese speakers or English speakers. There were not a lot of CN/EN/JP resources out there. So I set out to create some on my own. There are enough people in similar situations (Chinese people who have studied English and now want to learn Japanese, Asian-Americans who knows some Chinese studying Japanese) that I figured it might be a helpful resource if I shared it with the public.
