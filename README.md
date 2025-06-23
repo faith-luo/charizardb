@@ -7,4 +7,12 @@ I am a native bilingual English/Chinese speaker. When I started learning Japanes
 
 Really, the key part of this is that I'd like to be able to see the Japanese variant of a Chinese character (hanzi), and the Chinese variant of a Japanese character (kanji) whenever I look up an English definition.
 
-It's pretty easy to find Japanese-English dictionaries, and Chinese-English dictionaries. You can probably dig out Chinese-Japanese or Japanese-Chinese dictionaries with enough elbow grease and search engine-foo, but they're not easily available to English speakers (which defies needing them in the first place). Also, they tend to have a lot of excess data.
+It's pretty easy to find Japanese-English dictionaries, and Chinese-English dictionaries. You can probably dig out Chinese-Japanese or Japanese-Chinese dictionaries with enough elbow grease and search engine-foo, but they're not easily available to English speakers (which defies needing them in the first place). Also, they tend to have a lot of excess data. I don't need a list of every Chinese word ever, I just want the 3000-4000 most common characters in both languages and a mapping between equivalences, in an easily readable format.
+
+For whatever reason I've had a hard time finding this. The best I've found is opencc's [dataset](https://github.com/BYVoid/OpenCC/blob/master/data/dictionary/JPVariants.txt). But it's a bit clunky to use because it's implemented in C++, and it also only has 369 entries.
+
+It turns out this is probably not that far from the real number, 90% of Japanese characters just match traditional Chinese variants. But with my techniques I was able to find 516. (They are not verified 1-1 though, so maybe it is a less consistent list than OpenCC's.)
+
+Once we have this data we can also make a list of all sino-japanese words (i.e. words that equivalent across characters, like 可憐/可怜=かれん=ke lian). 
+
+In any case, I'm sharing my data here. I'll do a proper writeup at some point, but most of the data is sourced from Unihan.
