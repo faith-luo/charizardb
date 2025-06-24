@@ -40,4 +40,12 @@ I'll do a proper writeup at some point, but most of the data is sourced from Uni
 * Group characters that have similar pinyin and semantic meanings as "merge candidates"
 * Merge characters that pass a certain heuristic
 
+In general, this problem is much harder than it sounds, for a few reasons:
+* A single language might have multiple versions of the same character - not just simplified/traditional, there may even be multiple simplified versions of the same character.
+* Characters can also vary regionally - China vs HK vs Singapore, or even different regions of China
+* Mappings are not one-to-one: a single character in Japanese can map to multiple in Chinese, and vice versa.
+  * 四 in Japanese = 肆, 四 in Chinese (the former being a financial/legal version)
+ 
+I'm relatively confident that anything listed as a variant in this dataset is a closely-related character cluster. It is guaranteed to have identical pinyin and highly similar on/kun (this is harder to measure because you can have multiple per character), and also guaranteed to be semantically related because we check this before merging any clusters. However, it is not guaranteed to be 100% accurate due to the issues mentioned above. I think we would need some kind of declustering step to prevent false positives around, for instance, grouping 肆/四 (these should really be separated into 肆/肆/肆 and 四/四/四).
+
 The source code is available at [faith-luo/make-anki-deck](https://github.com/faith-luo/anki-make-kanji-deck) but it's very disorganized.
