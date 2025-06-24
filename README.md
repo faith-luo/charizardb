@@ -49,3 +49,13 @@ In general, this problem is much harder than it sounds, for a few reasons:
 I'm relatively confident that anything listed as a variant in this dataset is a closely-related character cluster. It is guaranteed to have identical pinyin and highly similar on/kun (this is harder to measure because you can have multiple per character), and also guaranteed to be semantically related because we check this before merging any clusters. However, it is not guaranteed to be 100% accurate due to the issues mentioned above. I think we would need some kind of declustering step to prevent false positives around, for instance, grouping 肆/四 (these should really be separated into 肆/肆/肆 and 四/四/四).
 
 The source code is available at [faith-luo/make-anki-deck](https://github.com/faith-luo/anki-make-kanji-deck) but it's very disorganized.
+
+
+## Future work
+Another part of the motivation for this project is that there are some issues with the Unihan database for this particular use-case. Unihan only has three clusters of categories: Simplified Chinese, Traditional Chinese, and semantic variants. In particular, the last group covers Korean, Japanese, and any other han character-using regions all in one. This is a very Chinese-centric view, which admittedly makes some kind of sense because Chinese as a language uses these characters with by far the highest frequency (by comparison, there is a relatively limited set of Japanese characters that doesn't tend to increase very much), but it results in a lot of inconsistencies such as both the shinjitai and kyujitai forms of a Japanese character being smushed together into "semantic variant" category.
+
+I would love to, in the long run, compile a more accurate dataset centered around Chinese and Japanese that specifically delineates:
+* Most commonly used variants in modern Chinese
+* Most commonly used variants in modern Japanese
+* Variants within Japanese - name versions, shinjitai, kyjitai, etc
+* Variants within Chinese - regional, formal, legal, etc
